@@ -1,5 +1,5 @@
 import { Dialog } from "@reach/dialog";
-import React, { FC, useEffect, useMemo, useRef, useState } from "react";
+import React, { FC, useEffect, useRef, useState } from "react";
 import styles from "../styles/onboarding.module.css";
 import "@reach/dialog/styles.css";
 import { onboardingVideos } from "../constants/onboarding";
@@ -10,27 +10,11 @@ interface OnboardingProps {}
 
 const Onboarding: FC<OnboardingProps> = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [width, setWidth] = useState(480);
   const [isOpen, setOpen] = useState(false);
-  const mainDiv = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    setWidth(
-      (() => {
-        if (mainDiv.current?.clientWidth) {
-          if (mainDiv.current.clientWidth >= 520) {
-            return 480;
-          }
-          return mainDiv.current.clientWidth - 40;
-        }
-        return 480;
-      })()
-    );
-  }, []);
 
   return (
     <>
-      <div className={styles.main} ref={mainDiv}>
+      <div className={styles.main}>
         <button onClick={() => setOpen(true)} className={styles.button}>
           Open onboarding tutorial videos
         </button>
@@ -66,7 +50,6 @@ const Onboarding: FC<OnboardingProps> = () => {
                 <FadeIn key={item.url} visible={index === currentIndex}>
                   <iframe
                     src={item.url}
-                    width={width}
                     height="720"
                     frameBorder="0"
                     allow="autoplay; fullscreen; picture-in-picture"

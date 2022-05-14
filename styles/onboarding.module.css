@@ -91,4 +91,9 @@
 	.onboardingVideosContainer, .actionAndVideosContainer {
 		width: calc(100vw - 40px);
 	}
+
+	.closeButton {
+		right: 0;
+		top: -40px;
+	}
 }
