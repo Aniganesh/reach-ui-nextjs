@@ -20,4 +20,14 @@ export const onboardingVideos: { url: string; src: JSX.Element }[] = [
       </p>
     ),
   },
+  {
+    url: "https://player.vimeo.com/video/613729649?h=383438db14&color=ffffff&byline=0",
+    src: (
+      <p>
+        <a href="https://vimeo.com/613729649">Vertical Video</a>from{" "}
+        <a href="https://vimeo.com/idearocket">IdeaRocket</a>on{" "}
+        <a href="https://vimeo.com">Vimeo</a>.
+      </p>
+    ),
+  },
 ];
