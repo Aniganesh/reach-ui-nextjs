@@ -1,0 +1,94 @@
+.button {
+	padding: 8px;
+	border-radius: 8px;
+	text-transform: uppercase;
+	background-color: cornflowerblue;
+	color: white;
+	font-weight: 800;
+	border: 0px solid transparent;
+	cursor: pointer;
+}
+
+.dialog[data-reach-dialog-content] {
+	position: relative;
+	width: fit-content;
+	padding: 0;
+	background: transparent;
+}
+
+.closeButton {
+	position: absolute;
+	right: -80px;
+	top: 0;
+	cursor: pointer;
+}
+
+
+.onboardingVideosContainer {
+	display: flex;
+	align-items: center;
+	width: 405px;
+	margin: 0 auto;
+	position: relative;
+	height: 762px
+}
+
+.actionButton {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	background-color: white;
+	border: 0px solid transparent;
+	cursor: pointer;
+	position: absolute;
+}
+
+.leftAction {
+	left: -20px;
+}
+
+.rightAction {
+	right: -20px;
+}
+
+.transitionDiv {
+	transition: cubic-bezier(1, 0, 0, 1);
+}
+
+.invisible {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.visible {
+	opacity: 1;
+	width: unset;
+	height: 720px;
+
+}
+
+.actionAndVideosContainer {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+
+.main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+@media screen and (max-width: 480px) {
+	.dialog {
+		margin: 0 auto;
+	}
+
+	.onboardingVideosContainer, .actionAndVideosContainer {
+		width: calc(100vw - 40px);
+	}
+}
